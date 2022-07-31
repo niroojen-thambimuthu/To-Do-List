@@ -20,13 +20,9 @@ function addItemToList(){
     
 }
 
-
-// Add a "checked" symbol when clicking on a list item
-let list = document.querySelector("li");
-list.addEventListener("click", keyClicked);
-
-function keyClicked(){
-    console.log("trest");
-    list.classList.toggle("itemDone");
-
-};
+let list = document.querySelector("ol");
+list.addEventListener("click", function(event) {
+  if (event.target.tagName === "LI") {
+    event.target.classList.toggle("itemDone");
+  }
+}, false);
