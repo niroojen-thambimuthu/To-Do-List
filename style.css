@@ -8,4 +8,6 @@ body{
     min-width: 300px;
 }
 
-
+.itemDone {
+    text-decoration: line-through;
+}
