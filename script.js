@@ -5,10 +5,19 @@ function addItemToList(){
     let tempList = document.createElement("li");
     let addToList = document.getElementById("listToDo");
 
+    let closeBtn = document.createElement("button");
+    closeBtn.innerHTML = "X";
+    closeBtn.addEventListener("click", function () {
+    alert("Button is clicked");
+    });
+    // document.body.appendChild(btn);
+
     // item cannot be empty
     if(inputText !== ""){
         tempList.innerText = inputText;
         addToList.appendChild(tempList);
+        addToList.appendChild(closeBtn);
+
     }
 
     // tempList.innerText = inputText;
@@ -26,3 +35,6 @@ list.addEventListener("click", function(event) {
     event.target.classList.toggle("itemDone");
   }
 }, false);
+
+
+
