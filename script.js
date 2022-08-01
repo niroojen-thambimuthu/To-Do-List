@@ -1,32 +1,22 @@
+// add item to list
 function addItemToList(){
-    // console.log("ITEM should be added!");
-
     let inputText = document.getElementById("itemForList").value;
-    let tempList = document.createElement("li");
-    let addToList = document.getElementById("listToDo");
-
+    let addToList = document.getElementById("listToDo");    
     let divItem = document.createElement("div");
+    let tempList = document.createElement("li");
     let closeBtn = document.createElement("button");
-    closeBtn.innerHTML = "X";
-    // document.body.appendChild(btn);
-
+    
     // item cannot be empty
     if(inputText !== ""){
         tempList.innerText = inputText;
-        // divItem.appendChild(addToList);
+        closeBtn.innerHTML = "X";
         divItem.appendChild(tempList);
         divItem.appendChild(closeBtn);
         addToList.appendChild(divItem);
-        // addToList.appendChild(tempList);
-        // addToList.appendChild(closeBtn);
-        // console.log(addToList);
     }
-
-    // tempList.innerText = inputText;
-    // console.log(inputText);
-    // console.log(tempList);   
 }
 
+// cross list item
 let list = document.querySelector("ol");
 list.addEventListener("click", function(event) {
   if (event.target.tagName === "LI") {
@@ -34,18 +24,10 @@ list.addEventListener("click", function(event) {
   }
 }, false);
 
-
+// Delete list item
 let clickBtn = document.querySelector("ol");
-
 clickBtn.addEventListener("click", function (event) {
-  console.log(event.target);
   if (event.target.tagName === "BUTTON") {
     event.target.closest("div").classList.toggle("itemClose");
   }
-  // if (event.target.closest("div")) {
-  //   event.target.closest("div").classList.toggle("itemClose");
-  // }
-  console.log(event.target);
-  console.log(event.target.closest("div"));
-  // console.log(this.closest("div"));
 });
