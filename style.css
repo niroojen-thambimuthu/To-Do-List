@@ -11,3 +11,8 @@ body{
 .itemDone {
     text-decoration: line-through;
 }
+
+.itemClose{
+    /* background-color: red; */
+    display: none;
+}
