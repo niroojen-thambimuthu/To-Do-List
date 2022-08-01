@@ -14,8 +14,11 @@ function addItemToList(){
     if(inputText !== ""){
         tempList.innerText = inputText;
         // divItem.appendChild(addToList);
-        addToList.appendChild(tempList);
-        addToList.appendChild(closeBtn);
+        divItem.appendChild(tempList);
+        divItem.appendChild(closeBtn);
+        addToList.appendChild(divItem);
+        // addToList.appendChild(tempList);
+        // addToList.appendChild(closeBtn);
         // console.log(addToList);
     }
 
@@ -35,8 +38,14 @@ list.addEventListener("click", function(event) {
 let clickBtn = document.querySelector("ol");
 
 clickBtn.addEventListener("click", function (event) {
+  console.log(event.target);
   if (event.target.tagName === "BUTTON") {
-    event.target.classList.toggle("itemClose");
+    event.target.closest("div").classList.toggle("itemClose");
   }
-  // console.log("Button is clicked");
+  // if (event.target.closest("div")) {
+  //   event.target.closest("div").classList.toggle("itemClose");
+  // }
+  console.log(event.target);
+  console.log(event.target.closest("div"));
+  // console.log(this.closest("div"));
 });
