@@ -1,4 +1,5 @@
-// add item to list
+// Add item to list
+// Will create LI and BUTTON within DIV
 function addItemToList(){
     let inputText = document.getElementById("itemForList").value;
     let addToList = document.getElementById("listToDo");    
@@ -6,7 +7,7 @@ function addItemToList(){
     let tempList = document.createElement("li");
     let closeBtn = document.createElement("button");
     
-    // item cannot be empty
+    // Item cannot be empty
     if(inputText !== ""){
         tempList.innerText = inputText;
         closeBtn.innerHTML = "X";
@@ -16,7 +17,7 @@ function addItemToList(){
     }
 }
 
-// cross list item
+// Crossout list item
 let list = document.querySelector("ol");
 list.addEventListener("click", function(event) {
   if (event.target.tagName === "LI") {
