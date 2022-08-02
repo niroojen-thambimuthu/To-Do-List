@@ -11,6 +11,7 @@ function addItemToList(){
     if(inputText !== ""){
         tempList.innerText = inputText;
         closeBtn.innerHTML = "X";
+        divItem.className = "listItem";
         divItem.appendChild(tempList);
         divItem.appendChild(closeBtn);
         addToList.appendChild(divItem);
