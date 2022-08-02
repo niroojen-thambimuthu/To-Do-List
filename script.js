@@ -11,10 +11,15 @@ function addItemToList(){
     if(inputText !== ""){
         tempList.innerText = inputText;
         closeBtn.innerHTML = "X";
-        divItem.className = "listItem";
-        divItem.appendChild(tempList);
-        divItem.appendChild(closeBtn);
-        addToList.appendChild(divItem);
+        tempList.appendChild(closeBtn);
+        addToList.appendChild(tempList);
+        // divItem.className = "listItem";
+        // divItem.appendChild(tempList);
+        // divItem.appendChild(closeBtn);
+        // addToList.appendChild(divItem);
+
+        // console.log(tempList);
+        // console.log(tempList.appendChild(closeBtn));
     }
 }
 

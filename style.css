@@ -35,10 +35,15 @@ body{
     border-radius: 10px;
 }
 
-.listItem > li, .listItem > button{
+/* 
+.listItem > li::marker, .listItem > li, .listItem > button{
     display: inline-block;
 }
 
 .listItem > button{
     float: right;
-}
+} */
+
+li > button {
+    float: right;
+  }
