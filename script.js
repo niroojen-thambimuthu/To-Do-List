@@ -12,7 +12,9 @@ function addItemToList(){
         tempList.innerText = inputText;
         closeBtn.innerHTML = "X";
         tempList.appendChild(closeBtn);
+        addToList.className = "listItem";
         addToList.appendChild(tempList);
+        
         // divItem.className = "listItem";
         // divItem.appendChild(tempList);
         // divItem.appendChild(closeBtn);
@@ -35,6 +37,6 @@ list.addEventListener("click", function(event) {
 let clickBtn = document.querySelector("ol");
 clickBtn.addEventListener("click", function (event) {
   if (event.target.tagName === "BUTTON") {
-    event.target.closest("div").classList.toggle("itemClose");
+    event.target.closest("LI").classList.toggle("itemClose");
   }
 });
