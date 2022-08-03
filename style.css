@@ -12,8 +12,10 @@ body{
 
 .container{
     background-color: #D4F2EF;
+    max-width: 600px;
+    margin: 0 auto;
     /* max-width: 450px; */
-    /* border-radius: 10px; */
+    border-radius: 5px;
     /* border: 3px solid red; */
 }
 
@@ -30,9 +32,15 @@ body{
     display: none;
 }
 
-.listItem{
+/* .listItem{
     background-color: white;
     border-radius: 10px;
+    margin: 5px;
+} */
+
+.listToDo{
+    /* padding: 0; */
+    margin: 10px;
 }
 
 /* 
@@ -45,5 +53,33 @@ body{
 } */
 
 li > button {
-    float: right;
+    /* float: right; */
+  }
+
+
+
+  ol {
+    list-style: none;
+    counter-reset: item;
+    padding-left: 0;
+  }
+  li {
+    counter-increment: item;
+    height: 25px;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #29857F;
+    margin: 5px;
+  }
+  li:before {
+    margin-left: 10px;
+    margin-right: 10px;
+    content: counter(item);
+    background:#29857F;
+    border-radius: 100%;
+    color: white;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
   }

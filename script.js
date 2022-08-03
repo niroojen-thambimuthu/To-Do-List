@@ -12,7 +12,7 @@ function addItemToList(){
         tempList.innerText = inputText;
         closeBtn.innerHTML = "X";
         tempList.appendChild(closeBtn);
-        addToList.className = "listItem";
+        // addToList.className = "listItem";
         addToList.appendChild(tempList);
         
         // divItem.className = "listItem";
