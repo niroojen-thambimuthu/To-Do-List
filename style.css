@@ -23,6 +23,7 @@ body{
 
 .itemDone {
     text-decoration: line-through;
+    text-decoration-thickness: 3px;
 }
 
 .itemClose{
@@ -33,45 +34,48 @@ body{
     padding: 10px;    
 }
 
-li > button {
-   float: right;
-   /* margin-left: 10px; */
-   /* margin-right: 10px; */
-   background:#29857F;
-   /* border-radius: 5px; */
-   /* border-radius: 100%; */
-   /* height: 100%; */
-   color: white;
-   /* width: 2.4em; */
-   /* text-align: center; */
-   display: inline-block;
-}
-
-
-
-  ol {
+ol {
     list-style: none;
     counter-reset: item;
     padding-left: 0;
-  }
-  li {
+}
+
+li {
     counter-increment: item;
-    /* height: 30px; */
     margin-bottom: 5px;
     background-color: white;
     border-radius: 10px;
     border: 2px solid #29857F;
     margin: 5px;
-    vertical-align: baseline
-  }
-  li:before {
+    font-size: 18px;
+}
+
+li:before {
     margin-left: 10px;
     margin-right: 10px;
     content: counter(item);
     background:#29857F;
     border-radius: 100%;
-    color: white;
+    color: #D4F2EF;
     width: 1.2em;
     text-align: center;
     display: inline-block;
-  }
+}
+
+
+li > button {
+    margin-left: 10px;
+    margin-right: 10px;
+    background:#29857F;
+    border-radius: 10px;
+    color: #D4F2EF;
+    text-align: center;
+    display: inline-block;
+    float: right;
+}
+ 
+ 
+li > button .text {
+    margin-left: auto;
+    margin-right: auto;
+}
