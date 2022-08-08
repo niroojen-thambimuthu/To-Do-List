@@ -34,10 +34,23 @@ body{
     padding: 10px;    
 }
 
+#buttonAdd{
+    background:#29857F;
+    color: #D4F2EF;
+}
+
+#buttonAdd:hover, li > button:hover {
+    opacity: 0.6;
+}
+
 ol {
     list-style: none;
     counter-reset: item;
     padding-left: 0;
+}
+
+ol li:nth-child(even) {
+    background: #e5e5e5;
 }
 
 li {
@@ -48,6 +61,11 @@ li {
     border: 2px solid #29857F;
     margin: 5px;
     font-size: 18px;
+}
+
+li:hover{
+    opacity: 0.9;
+    border: black;
 }
 
 li:before {
